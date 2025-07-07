@@ -1,0 +1,1393 @@
+
+**** Build of configuration mtye_p070_modem for project mtyeA_p070_schnellenergy_9.2.0.1 ****
+
+"C:\\ti\\ccs1260\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../cc13x2.syscfg"
+Invoking: SysConfig
+"C:/ti/ccs1260/ccs/utils/sysconfig_1.19.0/sysconfig_cli.bat" --script "D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/cc13x2.syscfg" -o "syscfg" -s "C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/.metadata/product.json" -s "C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/.metadata/product.json" --compiler ccs
+Running script...
+Validating...
+Generating Code (cc13x2.syscfg)...
+    '/ti/drivers/RF' -> '/ti/drivers'
+    '/third_party/spiffs' -> '/ti/drivers'
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\ti_devices_config.c...
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\ti_drivers_config.c...
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\ti_drivers_config.h...
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\ti_utils_build_linker.cmd.genlibs...
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\syscfg_c.rov.xs...
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\ti_utils_runtime_model.gv...
+Writing D:\Development\workfolder\Mioty_statck_code\mtyeA_p070_schnellenergy_9.2.0.1\mtye_p070_modem\syscfg\ti_utils_runtime_Makefile...
+Finished building: "../cc13x2.syscfg"
+ 
+Building file: "syscfg/ti_devices_config.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="syscfg/ti_devices_config.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="syscfg" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "syscfg/ti_devices_config.c"
+Finished building: "syscfg/ti_devices_config.c"
+ 
+Building file: "../apps/flash_interface_ext_rtos_NVS.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/flash_interface_ext_rtos_NVS.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/flash_interface_ext_rtos_NVS.c"
+ 
+>> Compilation failure
+apps/subdir_rules.mk:9: recipe for target 'apps/flash_interface_ext_rtos_NVS.obj' failed
+"C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/NVS.h", line 637 (col. 3): fatal error #191: error while writing generated IL output file
+1 catastrophic error detected in the compilation of "../apps/flash_interface_ext_rtos_NVS.c".
+Compilation terminated.
+gmake: *** [apps/flash_interface_ext_rtos_NVS.obj] Error 1
+Building file: "../apps/RtosMain.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/RtosMain.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/RtosMain.c"
+ 
+>> Compilation failure
+apps/subdir_rules.mk:9: recipe for target 'apps/RtosMain.obj' failed
+"D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc/sf_stack_types.h", line 857 (col. 25): fatal error #191: error while writing generated IL output file
+1 catastrophic error detected in the compilation of "../apps/RtosMain.c".
+Compilation terminated.
+gmake: *** [apps/RtosMain.obj] Error 1
+Building file: "syscfg/ti_drivers_config.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="syscfg/ti_drivers_config.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="syscfg" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "syscfg/ti_drivers_config.c"
+subdir_rules.mk:25: recipe for target 'syscfg/ti_drivers_config.obj' failed
+Cannot write to temporary command file 'C:\Users\Ajith\AppData\Local\Temp\{4DDB97E8-86C1-4729-B51F-F0FD8D95B1F8}': No space left on device
+gmake: *** [syscfg/ti_drivers_config.obj] Error 1
+Building file: "../apps/TMP1075/TMP1075.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/TMP1075/TMP1075.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/TMP1075" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/TMP1075/TMP1075.c"
+ 
+>> Compilation failure
+apps/TMP1075/subdir_rules.mk:9: recipe for target 'apps/TMP1075/TMP1075.obj' failed
+"../apps/TMP1075/TMP1075.c", line 104: warning #118-D: non-void function "TMP1075_read" should return a value
+"C:\ti\simplelink_cc13xx_cc26xx_sdk_5_30_01_01\source\ti\posix\ccs\sys/types.h", line 210 (col. 38): fatal error #191: error while writing generated IL output file
+1 catastrophic error detected in the compilation of "../apps/TMP1075/TMP1075.c".
+Compilation terminated.
+gmake: *** [apps/TMP1075/TMP1075.obj] Error 1
+Building file: "../apps/exampleMain.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/exampleMain.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/exampleMain.c"
+1 Assembly Error, 4 Assembly Warnings
+ 
+>> Compilation failure
+apps/subdir_rules.mk:9: recipe for target 'apps/exampleMain.obj' failed
+"../apps/exampleMain.c", line 427: warning #225-D: function "Board_shutDownExtFlash1" declared implicitly
+"../apps/exampleMain.c", line 136: warning #179-D: function "loc_sendData" was declared but never referenced
+"C:\Users\Ajith\AppData\Local\Temp\{AACB29CB-484A-44FF-86A4-399967FFD328}", ERROR!   at line 1449: [E0002] Illegal mnemonic specified
+		, DW_AT_TI_call
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{AACB29CB-484A-44FF-86A4-399967FFD328}", WARNING! at line 1455: [W0003] .dwcfi directives must come after a .dwcie or .dwfde directive; ignored
+		.dwcfi	cfa_offset, 4
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{AACB29CB-484A-44FF-86A4-399967FFD328}", WARNING! at line 1461: [W0003] .dwcfi directives must come after a .dwcie or .dwfde directive; ignored
+		.dwcfi	cfa_offset, 0
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{AACB29CB-484A-44FF-86A4-399967FFD328}", WARNING! at line 1466: [W0003] .dwendentry must come after .dwcie or .dwfde directive; ignored
+		.dwendentry
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{AACB29CB-484A-44FF-86A4-399967FFD328}", WARNING! at line 1472: [W0003] .dwendentry must come after .dwcie or .dwfde directive; ignored
+		.dwendentry
+ 
+ 
+Errors in Source - Assembler Aborted
+gmake: *** [apps/exampleMain.obj] Error 1
+Building file: "../apps/TMP1075/config.c"
+Invoking: Arm Compiler
+Finished building: "../apps/TMP1075/config.c"
+ 
+Building file: "../apps/app_commons/driver/sf_drv_cc13x2_lfxoCalib.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/driver/sf_drv_cc13x2_lfxoCalib.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons/driver" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/driver/sf_drv_cc13x2_lfxoCalib.c"
+apps/app_commons/driver/subdir_rules.mk:9: recipe for target 'apps/app_commons/driver/sf_drv_cc13x2_lfxoCalib.obj' failed
+>> Unterminated quote in command file; aborting
+>> ERROR: cannot run C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\bin\armasm.exe - No space left on device
+gmake: *** [apps/app_commons/driver/sf_drv_cc13x2_lfxoCalib.obj] Error 1
+Building file: "../apps/app_commons/driver/sf_drv_clock.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/driver/sf_drv_clock.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons/driver" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/driver/sf_drv_clock.c"
+ 
+>> Compilation failure
+apps/app_commons/driver/subdir_rules.mk:9: recipe for target 'apps/app_commons/driver/sf_drv_clock.obj' failed
+"C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/kernel/tirtos/packages/ti/sysbios/knl/Clock.h", line 379 (col. 37): fatal error #191: error while writing generated IL output file
+1 catastrophic error detected in the compilation of "../apps/app_commons/driver/sf_drv_clock.c".
+Compilation terminated.
+gmake: *** [apps/app_commons/driver/sf_drv_clock.obj] Error 1
+Cannot write to temporary command file 'C:\Users\Ajith\AppData\Local\Temp\{D8739E38-71CE-4442-B65C-1ECDEE81D34E}': No space left on device
+gmake: *** [apps/app_commons/hal/sf_app_hal_lp.obj] Error 1
+Building file: "../apps/app_commons/hal/sf_app_hal_lp.c"
+Invoking: Arm Compiler
+apps/app_commons/hal/subdir_rules.mk:9: recipe for target 'apps/app_commons/hal/sf_app_hal_lp.obj' failed
+Building file: "../apps/app_commons/hal/sf_app_hal_mem.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/hal/sf_app_hal_mem.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons/hal" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/hal/sf_app_hal_mem.c"
+apps/app_commons/hal/subdir_rules.mk:9: recipe for target 'apps/app_commons/hal/sf_app_hal_mem.obj' failed
+Cannot write to temporary command file 'C:\Users\Ajith\AppData\Local\Temp\{B44AC2F1-3D92-4192-9C6F-62A8647E74AF}': No space left on device
+gmake: *** [apps/app_commons/hal/sf_app_hal_mem.obj] Error 1
+Building file: "../apps/app_commons/hal/sf_app_hal.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/hal/sf_app_hal.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons/hal" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/hal/sf_app_hal.c"
+apps/app_commons/hal/subdir_rules.mk:9: recipe for target 'apps/app_commons/hal/sf_app_hal.obj' failed
+>> Unterminated quote in command file; aborting
+>> ERROR: cannot run C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\bin\armasm.exe - No space left on device
+gmake: *** [apps/app_commons/hal/sf_app_hal.obj] Error 1
+Building file: "../apps/app_commons/hal/sf_app_hal_system.c"
+Invoking: Arm Compiler
+ 
+>> Compilation failure
+apps/app_commons/hal/subdir_rules.mk:9: recipe for target 'apps/app_commons/hal/sf_app_hal_system.obj' failed
+Fatal error: cannot open source file ":--include_path=D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps": Invalid argument
+1 catastrophic error detected in the compilation of ":--include_path=D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps".
+Compilation terminated.
+gmake: *** [apps/app_commons/hal/sf_app_hal_system.obj] Error 1
+Building file: "../apps/app_commons/driver/sf_cc13x2_miotyRegisters.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/driver/sf_cc13x2_miotyRegisters.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons/driver" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/driver/sf_cc13x2_miotyRegisters.c"
+2 Assembly Errors, 1 Assembly Warning
+ 
+>> Compilation failure
+apps/app_commons/driver/subdir_rules.mk:9: recipe for target 'apps/app_commons/driver/sf_cc13x2_miotyRegisters.obj' failed
+"C:\Users\Ajith\AppData\Local\Temp\{302A98CA-91F9-41FD-A931-92ED6C45FE5D}", ERROR!   at line 17734: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1248, DW_AT_type(*$C$DW$T$460)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{302A98CA-91F9-41FD-A931-92ED6C45FE5D}", WARNING! at line 33002: [W0000] Invalid attribute type specified, attribute ignored
+		.dwattr $C$DW$2418, DW_AT_TI_symb0d)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{302A98CA-91F9-41FD-A931-92ED6C45FE5D}", ERROR!   at line 33051: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$478, DW_AT_type(*$C$DW$T$659)
+ 
+ 
+Errors in Source - Assembler Aborted
+gmake: *** [apps/app_commons/driver/sf_cc13x2_miotyRegisters.obj] Error 1
+Building file: "../apps/app_commons/sf_memory_management.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/sf_memory_management.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/sf_memory_management.c"
+Finished building: "../apps/app_commons/sf_memory_management.c"
+ 
+Building file: "../apps/app_mioty/sf_stack_app_ex.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_mioty/sf_stack_app_ex.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_mioty" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_mioty/sf_stack_app_ex.c"
+Finished building: "../apps/app_mioty/sf_stack_app_ex.c"
+ 
+Building file: "../hal/src/scif_osal_tirtos.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/scif_osal_tirtos.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/scif_osal_tirtos.c"
+Finished building: "../hal/src/scif_osal_tirtos.c"
+ 
+Building file: "../apps/app_commons/hal/sf_app_hal_timer.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="apps/app_commons/hal/sf_app_hal_timer.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="apps/app_commons/hal" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../apps/app_commons/hal/sf_app_hal_timer.c"
+Finished building: "../apps/app_commons/hal/sf_app_hal_timer.c"
+ 
+Building file: "../hal/src/sf_stack_hal_aes.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_aes.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_aes.c"
+Finished building: "../hal/src/sf_stack_hal_aes.c"
+ 
+Building file: "../hal/src/sf_stack_hal_mem.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_mem.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_mem.c"
+Finished building: "../hal/src/sf_stack_hal_mem.c"
+ 
+Building file: "../hal/src/sf_stack_hal_mioty_timer.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_mioty_timer.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_mioty_timer.c"
+ 
+>> Compilation failure
+hal/src/subdir_rules.mk:9: recipe for target 'hal/src/sf_stack_hal_mioty_timer.obj' failed
+TP>> internal error: read type twice
+This is caused by a defect in the TI G3 C/C++ Codegen.
+TI Customer Support may be able to suggest a workaround to avoid this.
+ 
+Upgrading to the newest version of the compiler may fix this problem.
+ 
+Contact TI in the E2E support forums at http://e2e.ti.com under
+"Development Tools", "TI C/C++ Compiler".  See the link titled
+"Submitting an issue".
+ 
+We need to see this ENTIRE error message and a complete, reproducible
+test case including ALL of the command-line options.
+Include the .pp file created by option --preproc_with_comment
+ 
+gmake: *** [hal/src/sf_stack_hal_mioty_timer.obj] Error 1
+Building file: "../hal/src/scif_framework.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/scif_framework.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/scif_framework.c"
+Finished building: "../hal/src/scif_framework.c"
+ 
+Building file: "../hal/src/sf_stack_hal_timer.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_timer.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_timer.c"
+hal/src/subdir_rules.mk:9: recipe for target 'hal/src/sf_stack_hal_timer.obj' failed
+Cannot write to temporary command file 'C:\Users\Ajith\AppData\Local\Temp\{F7199BFF-7539-4188-9582-032180783576}': No space left on device
+gmake: *** [hal/src/sf_stack_hal_timer.obj] Error 1
+Building file: "../hal/src/sf_stack_hal_serial_timer.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_serial_timer.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_serial_timer.c"
+Finished building: "../hal/src/sf_stack_hal_serial_timer.c"
+ 
+Building file: "../hal/src/sf_stack_hal_serial.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_serial.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_serial.c"
+367 Assembly Errors, No Assembly Warnings
+ 
+>> Compilation failure
+hal/src/subdir_rules.mk:9: recipe for target 'hal/src/sf_stack_hal_serial.obj' failed
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 19: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1, DW_AT_type(*$C$DW$T$1119)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 31: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$2, DW_AT_type(*$C$DW$T$1120)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 43: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$3, DW_AT_type(*$C$DW$T$1121)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 55: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$1121)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 97: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$7, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 119: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$9, DW_AT_type(*$C$DW$T$1118)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 145: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$12, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 168: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$17, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 210: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$24, DW_AT_type(*$C$DW$T$173)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 217: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$25, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 220: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$26, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 231: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$28, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 241: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$30, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 281: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$38, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 298: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$41, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 312: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$168)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 320: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$44, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 327: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$45, DW_AT_type(*$C$DW$T$744)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 330: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$46, DW_AT_type(*$C$DW$T$168)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 338: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$47, DW_AT_type(*$C$DW$T$173)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 345: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$48, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 368: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$51, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 382: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$52, DW_AT_type(*$C$DW$T$190)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 388: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$53, DW_AT_type(*$C$DW$T$10)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 414: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$54, DW_AT_type(*$C$DW$T$190)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 421: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$55, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 428: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$56, DW_AT_type(*$C$DW$T$10)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 435: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$57, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 442: [E0001] Undefined symbol
+	        LDR       A3, $C$CON1           ; [DPU_V7M3_PIPE] |252| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 442: [E0001] Address must be defined in the current section
+	        LDR       A3, $C$CON1           ; [DPU_V7M3_PIPE] |252| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 442: [E0004] Illegal operand
+	        LDR       A3, $C$CON1           ; [DPU_V7M3_PIPE] |252| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 447: [E0001] Undefined symbol
+	        LDR       A1, $C$CON2           ; [DPU_V7M3_PIPE] |252| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 447: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON2           ; [DPU_V7M3_PIPE] |252| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 447: [E0004] Illegal operand
+	        LDR       A1, $C$CON2           ; [DPU_V7M3_PIPE] |252| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 463: [E0001] Undefined symbol
+	        BL        UART_write            ; [DPU_V7M3_PIPE] |256| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 567: [E0001] Undefined symbol
+	        BL        ti_sysbios_knl_Task_Params__init__S ; [DPU_V7M3_PIPE] |1152| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 570: [E0001] Undefined symbol
+	        LDR       A1, $C$CON3           ; [DPU_V7M3_PIPE] |159| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 570: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON3           ; [DPU_V7M3_PIPE] |159| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 570: [E0004] Illegal operand
+	        LDR       A1, $C$CON3           ; [DPU_V7M3_PIPE] |159| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 579: [E0001] Undefined symbol
+	        LDR       A1, $C$CON4           ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 579: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON4           ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 579: [E0004] Illegal operand
+	        LDR       A1, $C$CON4           ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 580: [E0001] Undefined symbol
+	        LDR       A2, $C$CON5           ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 580: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON5           ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 580: [E0004] Illegal operand
+	        LDR       A2, $C$CON5           ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 588: [E0001] Undefined symbol
+	        BL        ti_sysbios_knl_Task_construct ; [DPU_V7M3_PIPE] |165| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 600: [E0001] Undefined symbol
+	        BL        ti_sysbios_knl_Semaphore_Params__init__S ; [DPU_V7M3_PIPE] |549| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 606: [E0001] Undefined symbol
+	        LDR       A1, $C$CON6           ; [DPU_V7M3_PIPE] |170| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 606: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON6           ; [DPU_V7M3_PIPE] |170| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 606: [E0004] Illegal operand
+	        LDR       A1, $C$CON6           ; [DPU_V7M3_PIPE] |170| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 614: [E0001] Undefined symbol
+	        BL        ti_sysbios_knl_Semaphore_construct ; [DPU_V7M3_PIPE] |170| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 672: [E0001] Undefined symbol
+	        LDR       V1, $C$CON7           ; [DPU_V7M3_PIPE] |124| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 672: [E0001] Address must be defined in the current section
+	        LDR       V1, $C$CON7           ; [DPU_V7M3_PIPE] |124| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 672: [E0004] Illegal operand
+	        LDR       V1, $C$CON7           ; [DPU_V7M3_PIPE] |124| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 678: [E0001] Undefined symbol
+	        LDR       A2, $C$CON8           ; [DPU_V7M3_PIPE] |124| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 678: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON8           ; [DPU_V7M3_PIPE] |124| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 678: [E0004] Illegal operand
+	        LDR       A2, $C$CON8           ; [DPU_V7M3_PIPE] |124| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 688: [E0001] Undefined symbol
+	        LDR       A2, $C$CON9           ; [DPU_V7M3_PIPE] |127| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 688: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON9           ; [DPU_V7M3_PIPE] |127| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 688: [E0004] Illegal operand
+	        LDR       A2, $C$CON9           ; [DPU_V7M3_PIPE] |127| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 695: [E0001] Undefined symbol
+	        BL        UART_read             ; [DPU_V7M3_PIPE] |127| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 759: [E0001] Undefined symbol
+	        LDR       A1, $C$CON12          ; [DPU_V7M3_PIPE] |238| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 759: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON12          ; [DPU_V7M3_PIPE] |238| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 759: [E0004] Illegal operand
+	        LDR       A1, $C$CON12          ; [DPU_V7M3_PIPE] |238| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 765: [E0001] Undefined symbol
+	        LDR       A1, $C$CON13          ; [DPU_V7M3_PIPE] |238| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 765: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON13          ; [DPU_V7M3_PIPE] |238| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 765: [E0004] Illegal operand
+	        LDR       A1, $C$CON13          ; [DPU_V7M3_PIPE] |238| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 806: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$75, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 832: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$76, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 836: [E0001] Undefined symbol
+	        LDR       A3, $C$CON15          ; [DPU_V7M3_PIPE] |303| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 836: [E0001] Address must be defined in the current section
+	        LDR       A3, $C$CON15          ; [DPU_V7M3_PIPE] |303| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 836: [E0004] Illegal operand
+	        LDR       A3, $C$CON15          ; [DPU_V7M3_PIPE] |303| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 837: [E0001] Undefined symbol
+	        LDR       A2, $C$CON14          ; [DPU_V7M3_PIPE] |303| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 837: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON14          ; [DPU_V7M3_PIPE] |303| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 837: [E0004] Illegal operand
+	        LDR       A2, $C$CON14          ; [DPU_V7M3_PIPE] |303| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 858: [E0001] Undefined symbol
+	        LDR       A1, $C$CON16          ; [DPU_V7M3_PIPE] |309| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 858: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON16          ; [DPU_V7M3_PIPE] |309| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 858: [E0004] Illegal operand
+	        LDR       A1, $C$CON16          ; [DPU_V7M3_PIPE] |309| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 903: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$78, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 917: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$79, DW_AT_type(*$C$DW$T$190)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 923: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$80, DW_AT_type(*$C$DW$T$10)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 953: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$81, DW_AT_type(*$C$DW$T$190)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 960: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$82, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 967: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$83, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 973: [E0001] Undefined symbol
+	        LDR       V4, $C$CON17          ; [DPU_V7M3_PIPE] |285| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 973: [E0001] Address must be defined in the current section
+	        LDR       V4, $C$CON17          ; [DPU_V7M3_PIPE] |285| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 973: [E0004] Illegal operand
+	        LDR       V4, $C$CON17          ; [DPU_V7M3_PIPE] |285| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 974: [E0001] Undefined symbol
+	        LDR       V2, $C$CON20          ; [DPU_V7M3_PIPE] |288| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 974: [E0001] Address must be defined in the current section
+	        LDR       V2, $C$CON20          ; [DPU_V7M3_PIPE] |288| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 974: [E0004] Illegal operand
+	        LDR       V2, $C$CON20          ; [DPU_V7M3_PIPE] |288| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1138: [E0001] Undefined symbol
+	        LDR       V1, $C$CON21          ; [DPU_V7M3_PIPE] |178| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1138: [E0001] Address must be defined in the current section
+	        LDR       V1, $C$CON21          ; [DPU_V7M3_PIPE] |178| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1138: [E0004] Illegal operand
+	        LDR       V1, $C$CON21          ; [DPU_V7M3_PIPE] |178| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1144: [E0001] Undefined symbol
+	        LDR       V2, $C$CON22          ; [DPU_V7M3_PIPE] |180| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1144: [E0001] Address must be defined in the current section
+	        LDR       V2, $C$CON22          ; [DPU_V7M3_PIPE] |180| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1144: [E0004] Illegal operand
+	        LDR       V2, $C$CON22          ; [DPU_V7M3_PIPE] |180| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1154: [E0001] Undefined symbol
+	        BL        UART_close            ; [DPU_V7M3_PIPE] |181| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1229: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$92, DW_AT_type(*$C$DW$T$167)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1242: [E0001] Undefined symbol
+	        LDR       A2, $C$CON30          ; [DPU_V7M3_PIPE] |196| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1242: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON30          ; [DPU_V7M3_PIPE] |196| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1242: [E0004] Illegal operand
+	        LDR       A2, $C$CON30          ; [DPU_V7M3_PIPE] |196| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1243: [E0001] Undefined symbol
+	        LDR       A1, $C$CON24          ; [DPU_V7M3_PIPE] |196| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1243: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON24          ; [DPU_V7M3_PIPE] |196| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1243: [E0004] Illegal operand
+	        LDR       A1, $C$CON24          ; [DPU_V7M3_PIPE] |196| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1246: [E0001] Undefined symbol
+	        LDR       A2, $C$CON31          ; [DPU_V7M3_PIPE] |197| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1246: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON31          ; [DPU_V7M3_PIPE] |197| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1246: [E0004] Illegal operand
+	        LDR       A2, $C$CON31          ; [DPU_V7M3_PIPE] |197| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1249: [E0001] Undefined symbol
+	        LDR       A1, $C$CON32          ; [DPU_V7M3_PIPE] |198| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1249: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON32          ; [DPU_V7M3_PIPE] |198| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1249: [E0004] Illegal operand
+	        LDR       A1, $C$CON32          ; [DPU_V7M3_PIPE] |198| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1253: [E0001] Undefined symbol
+	        LDR       A1, $C$CON33          ; [DPU_V7M3_PIPE] |199| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1253: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON33          ; [DPU_V7M3_PIPE] |199| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1253: [E0004] Illegal operand
+	        LDR       A1, $C$CON33          ; [DPU_V7M3_PIPE] |199| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1262: [E0001] Undefined symbol
+	        BL        UART_Params_init      ; [DPU_V7M3_PIPE] |202| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1288: [E0001] Undefined symbol
+	        LDR       A1, $C$CON28          ; [DPU_V7M3_PIPE] |215| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1288: [E0001] Address must be defined in the current section
+	        LDR       A1, $C$CON28          ; [DPU_V7M3_PIPE] |215| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1288: [E0004] Illegal operand
+	        LDR       A1, $C$CON28          ; [DPU_V7M3_PIPE] |215| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1306: [E0001] Undefined symbol
+	        BL        UART_open             ; [DPU_V7M3_PIPE] |220| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1308: [E0001] Undefined symbol
+	        LDR       A2, $C$CON34          ; [DPU_V7M3_PIPE] |220| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1308: [E0001] Address must be defined in the current section
+	        LDR       A2, $C$CON34          ; [DPU_V7M3_PIPE] |220| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1308: [E0004] Illegal operand
+	        LDR       A2, $C$CON34          ; [DPU_V7M3_PIPE] |220| 
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1346: [E0002] Illegal mnemonic specified
+	C, DW_AT_decl_column(0x11)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1350: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$809, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1358: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$810, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1366: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$811, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1374: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$812, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1382: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$813, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1390: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$814, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1398: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$815, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1406: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$816, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1414: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$817, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1422: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$818, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1430: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$819, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1438: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$820, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1446: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$821, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1454: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$822, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1462: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$823, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1470: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$824, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1478: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$825, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1486: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$826, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1494: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$827, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1502: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$828, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1510: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$829, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1518: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$830, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1526: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$831, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1534: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$832, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1542: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$833, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1550: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$834, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1558: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$835, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1566: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$836, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1574: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$837, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1582: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$838, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1590: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$839, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1598: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$840, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1606: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$841, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1614: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$842, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1622: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$843, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1630: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$844, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1638: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$845, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1646: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$846, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1654: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$847, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1662: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$848, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1670: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$849, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1678: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$850, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1686: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$851, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1694: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$302, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1716: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$344, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1719: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$314, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1745: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$346, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1790: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$358, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1793: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$318, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1811: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$558, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1814: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$319, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1841: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$605, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1863: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$658, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1869: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$328, DW_AT_type(*$C$DW$T$657)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1884: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$487, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1926: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$331, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1929: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$332, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1952: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$334, DW_AT_type(*$C$DW$T$137)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 1993: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$179, DW_AT_type(*$C$DW$T$2)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2148: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$335, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2176: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$336, DW_AT_type(*$C$DW$T$189)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2228: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$337, DW_AT_type(*$C$DW$T$253)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2231: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$338, DW_AT_type(*$C$DW$T$254)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2254: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$340, DW_AT_type(*$C$DW$T$249)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2269: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$342, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2302: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$347, DW_AT_type(*$C$DW$T$249)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2337: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$350, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2366: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$351, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2369: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$352, DW_AT_type(*$C$DW$T$384)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2393: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$354, DW_AT_type(*$C$DW$T$384)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2421: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$355, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2424: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$356, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2460: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$357, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2488: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$358, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2511: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$360, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2517: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$362, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2540: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$364, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2585: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$370, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2597: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$371, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2600: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$372, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2628: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$373, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2763: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$196, DW_AT_type(*$C$DW$T$195)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2771: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$201, DW_AT_type(*$C$DW$T$195)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2779: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$198, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2782: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$507, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2800: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$209, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2803: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$508, DW_AT_type(*$C$DW$T$208)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2806: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$509, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2809: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$510, DW_AT_type(*$C$DW$T$207)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2826: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$212, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2831: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$213, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2837: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$512, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 2879: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$341, DW_AT_type(*$C$DW$T$135)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 3895: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$1507, DW_AT_type(*$C$DW$T$11)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 3903: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$138, DW_AT_type(*$C$DW$T$11)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 4201: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$353, DW_AT_type(*$C$DW$T$11)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 4846: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$537, DW_AT_type(*$C$DW$T$6)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 4873: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$644, DW_AT_type(*$C$DW$T$6)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 4926: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$T$334, DW_AT_type(*$C$DW$T$6)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5130: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$516, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5267: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$523, DW_AT_type(*$C$DW$T$275)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5277: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$524, DW_AT_type(*$C$DW$T$279)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5366: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$529, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5582: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$543, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5849: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$544, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 5926: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$550, DW_AT_type(*$C$DW$T$307)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6005: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$554, DW_AT_type(*$C$DW$T$316)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6056: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$557, DW_AT_type(*$C$DW$T$275)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6066: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$558, DW_AT_type(*$C$DW$T$320)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6155: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$563, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6288: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$570, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6318: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$573, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6328: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$574, DW_AT_type(*$C$DW$T$316)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 6375: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$577, DW_AT_type(*$C$DW$T$316)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7162: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$588, DW_AT_type(*$C$DW$T$350)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7286: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$594, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7373: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$601, DW_AT_type(*$C$DW$T$373)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7423: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$606, DW_AT_type(*$C$DW$T$379)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7433: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$607, DW_AT_type(*$C$DW$T$373)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7443: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$608, DW_AT_type(*$C$DW$T$373)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7493: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$613, DW_AT_type(*$C$DW$T$373)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7503: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$614, DW_AT_type(*$C$DW$T$390)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7513: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$615, DW_AT_type(*$C$DW$T$392)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7589: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$619, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7629: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$623, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 7639: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$624, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8070: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$643, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8090: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$645, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8100: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$646, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8110: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$647, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8157: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$650, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8167: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$651, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8177: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$652, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8187: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$653, DW_AT_type(*$C$DW$T$408)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8207: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$655, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8329: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$662, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8416: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$669, DW_AT_type(*$C$DW$T$414)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8466: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$674, DW_AT_type(*$C$DW$T$420)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8476: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$675, DW_AT_type(*$C$DW$T$414)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8486: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$676, DW_AT_type(*$C$DW$T$414)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8536: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$681, DW_AT_type(*$C$DW$T$414)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8546: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$682, DW_AT_type(*$C$DW$T$428)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8556: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$683, DW_AT_type(*$C$DW$T$430)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8635: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$687, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8675: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$691, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8685: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$692, DW_AT_type(*$C$DW$T$371)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 8828: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$700, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 9404: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$719, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 9488: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$724, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 9617: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$731, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 9817: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$746, DW_AT_type(*$C$DW$T$464)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10108: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$758, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10128: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$760, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10138: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$761, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10215: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$767, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10225: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$768, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10255: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$771, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10352: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$779, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10362: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$780, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10392: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$783, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10524: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$792, DW_AT_type(*$C$DW$T$500)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10534: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$793, DW_AT_type(*$C$DW$T$502)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10544: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$794, DW_AT_type(*$C$DW$T$500)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10554: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$795, DW_AT_type(*$C$DW$T$500)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10874: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$805, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10894: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$807, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10904: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$808, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10914: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$809, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10924: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$810, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10954: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$813, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 10964: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$814, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11089: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$822, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11165: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$824, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11175: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$825, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11205: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$828, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11225: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$830, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11272: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$833, DW_AT_type(*$C$DW$T$521)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11292: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$835, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11362: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$842, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11372: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$843, DW_AT_type(*$C$DW$T$315)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11382: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$844, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11402: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$846, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11513: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$855, DW_AT_type(*$C$DW$T$350)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11622: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$861, DW_AT_type(*$C$DW$T$530)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11632: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$862, DW_AT_type(*$C$DW$T$533)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11716: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$867, DW_AT_type(*$C$DW$T$463)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 11787: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$872, DW_AT_type(*$C$DW$T$544)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12310: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$879, DW_AT_type(*$C$DW$T$275)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12320: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$880, DW_AT_type(*$C$DW$T$550)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12330: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$881, DW_AT_type(*$C$DW$T$552)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12406: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$885, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12554: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$892, DW_AT_type(*$C$DW$T$561)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12564: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$893, DW_AT_type(*$C$DW$T$563)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12574: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$894, DW_AT_type(*$C$DW$T$565)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 12650: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$898, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13276: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$916, DW_AT_type(*$C$DW$T$581)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13306: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$919, DW_AT_type(*$C$DW$T$583)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13316: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$920, DW_AT_type(*$C$DW$T$585)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13462: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$925, DW_AT_type(*$C$DW$T$591)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13965: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$928, DW_AT_type(*$C$DW$T$275)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13975: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$929, DW_AT_type(*$C$DW$T$595)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 13985: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$930, DW_AT_type(*$C$DW$T$597)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14064: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$934, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14170: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$942, DW_AT_type(*$C$DW$T$608)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14180: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$943, DW_AT_type(*$C$DW$T$610)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14190: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$944, DW_AT_type(*$C$DW$T$612)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14269: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$948, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14362: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$953, DW_AT_type(*$C$DW$T$316)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14372: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$954, DW_AT_type(*$C$DW$T$316)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14382: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$955, DW_AT_type(*$C$DW$T$316)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14631: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$958, DW_AT_type(*$C$DW$T$275)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14641: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$959, DW_AT_type(*$C$DW$T$622)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14651: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$960, DW_AT_type(*$C$DW$T$624)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14730: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$964, DW_AT_type(*$C$DW$T$3)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14823: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$969, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14833: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$970, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14843: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$971, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14853: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$972, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14873: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$974, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14893: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$976, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14954: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$980, DW_AT_type(*$C$DW$T$581)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14984: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$983, DW_AT_type(*$C$DW$T$583)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 14994: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$984, DW_AT_type(*$C$DW$T$585)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15056: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$987, DW_AT_type(*$C$DW$T$634)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15066: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$988, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15110: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$989, DW_AT_type(*$C$DW$T$636)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15120: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$990, DW_AT_type(*$C$DW$T$636)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15208: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$992, DW_AT_type(*$C$DW$T$633)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15218: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$993, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15587: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1001, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15597: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1002, DW_AT_type(*$C$DW$T$530)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15617: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1004, DW_AT_type(*$C$DW$T$272)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15648: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1005, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15761: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1013, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15771: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1014, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15781: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1015, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15828: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1018, DW_AT_type(*$C$DW$T$530)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15838: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1019, DW_AT_type(*$C$DW$T$531)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15869: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1020, DW_AT_type(*$C$DW$T$530)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15889: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1022, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15926: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1024, DW_AT_type(*$C$DW$T$661)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 15946: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1026, DW_AT_type(*$C$DW$T$530)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 16017: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1029, DW_AT_type(*$C$DW$T$273)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at line 16027: [E0000] Illegal specification of a DIE reference
+		.dwattr $C$DW$1030, DW_AT_type(*$C$DW$T$294)
+ 
+"C:\Users\Ajith\AppData\Local\Temp\{95753711-1B27-49B1-90D9-3E38F381825C}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  UART_read
+  ti_sysbios_knl_Semaphore_construct
+  UART_open
+  ti_sysbios_knl_Semaphore_Params__init__S
+  UART_Params_init
+  UART_write
+  $C$CON13
+  $C$CON12
+  $C$CON17
+  $C$CON16
+  $C$CON15
+  $C$CON14
+  $C$CON33
+  $C$CON32
+  $C$CON31
+  $C$CON30
+  $C$CON34
+  $C$CON28
+  $C$CON22
+  $C$CON21
+  $C$CON20
+  $C$CON24
+  UART_close
+  ti_sysbios_knl_Task_Params__init__S
+  $C$CON5
+  $C$CON4
+  $C$CON7
+  $C$CON6
+  $C$CON1
+  $C$CON3
+  $C$CON2
+  $C$CON9
+  $C$CON8
+  ti_sysbios_knl_Task_construct
+ 
+Errors in Source - Assembler Aborted
+gmake: *** [hal/src/sf_stack_hal_serial.obj] Error 1
+Building file: "../hal/src/sf_stack_hal_mioty_rf.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O0 --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_mioty" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/hal/src" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/inc" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/stack/lib" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem" --include_path="C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/posix/ccs" --include_path="C:/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/" --preinclude="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/apps/app_commons/driver/target_config.h" --define=UART_ENABLED=1 -g --c99 --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hal/src/sf_stack_hal_mioty_rf.d_raw" --include_path="D:/Development/workfolder/Mioty_statck_code/mtyeA_p070_schnellenergy_9.2.0.1/mtye_p070_modem/syscfg" --obj_directory="hal/src" --cmd_file="D:/Development/workfolder/Mioty_statck_code/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt"  "../hal/src/sf_stack_hal_mioty_rf.c"
+ 
+>> Compilation failure
+hal/src/subdir_rules.mk:9: recipe for target 'hal/src/sf_stack_hal_mioty_rf.obj' failed
+Unhandled exception of type class std::bad_alloc: bad allocation
+ 
+This is caused by a defect in the TI G3 C/C++ Codegen.
+TI Customer Support may be able to suggest a workaround to avoid this.
+ 
+Upgrading to the newest version of the compiler may fix this problem.
+ 
+Contact TI in the E2E support forums at http://e2e.ti.com under
+"Development Tools", "TI C/C++ Compiler".  See the link titled
+"Submitting an issue".
+ 
+We need to see this ENTIRE error message and a complete, reproducible
+test case including ALL of the command-line options.
+Include the .pp file created by option --preproc_with_comment
+ 
+gmake: *** [hal/src/sf_stack_hal_mioty_rf.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

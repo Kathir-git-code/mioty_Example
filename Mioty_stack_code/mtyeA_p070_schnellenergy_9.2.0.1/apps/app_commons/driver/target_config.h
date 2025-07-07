@@ -1,0 +1,80 @@
+#ifndef __TARGET_CONFIG_H___
+#define __TARGET_CONFIG_H___
+/**
+ * @code
+ *  ___ _____ _   ___ _  _____ ___  ___  ___ ___
+ * / __|_   _/_\ / __| |/ / __/ _ \| _ \/ __| __|
+ * \__ \ | |/ _ \ (__| ' <| _| (_) |   / (__| _|
+ * |___/ |_/_/ \_\___|_|\_\_| \___/|_|_\\___|___|
+ * embedded.connectivity.solutions.==============
+ * @endcode
+ *
+ * @file       target_config.h
+ * @copyright  STACKFORCE GmbH, Germany, http://www.stackforce.de
+ * @author     STACKFORCE
+ * @brief      Contains target specific settings.
+ */
+
+#include "inc/hw_memmap.h"
+
+/*==============================================================================
+                                      DEFINES
+==============================================================================*/
+#ifndef UART_ENABLED
+#error Please define if UART is enabled!
+#endif
+
+/* CC1352 Launchpad */
+#define SF_TARGET_CC13X2_LP                  0x01U
+
+/* This macro selects which module is used. Main Difference between
+   LP and COUA is the UART and that it has less PORT and Pins than
+   the LP. */
+#define SF_CC13XX_TARGET                   SF_TARGET_CC13X2_LP
+
+#define DeviceFamily_CC13X2
+
+/* Defines the number of used stacks */
+#define SF_STACK_NUMBER     1
+/* Defines a list of all used stack IDs */
+#define SF_STACK_LIST       {E_STACK_ID_MIOTY}
+
+#define SF_USE_RTOS_APPLICATION              1
+#define SF_MCU_SLEEP_ENABLED                 1
+
+#if UART_ENABLED
+/* Enable pin shutdown mode */
+#define USE_PIN_SHUTDOWN 0
+#endif
+
+/* Defines the global buffer size for mem operations */
+#define MEM_SHARED_RAM_SIZE 384
+
+/* Disables the initialization of peripheral tasks in RtosMain */
+#define INIT_PERIPHERAL_TASKS false
+/* Sets the task stack buffer size in RtosMain */
+#define TASK_STACK_SIZE 2048
+
+/*========================= NVM MEMORY =======================================*/
+/* Flash defines: For the CC1352 one flash page is 8192 byte */
+#define SECTOR_SIZE                       0x2000U
+/* The CC1352 has at least 44 flash pages (0-43). We will write our stuff on the
+   penultimate page */
+#define SECTOR_TO_USE                     42U
+/* Number of bytes that the stack will use in NVM sector.
+   Must not be larger than SECTOR_SIZE */
+#define TARGET_NVM_RESERVED_BYTES         128U
+/*! The absolute start address of the nvm memory. */
+#define TARGET_NVM_START_ADDR             (FLASHMEM_BASE + \
+                                          (SECTOR_TO_USE * SECTOR_SIZE))
+/*! The absolute end-address of the nvm memory. (The last addressable byte).
+    For now the usable memory is limited to 128 byte. */
+#define TARGET_NVM_END_ADDR               TARGET_NVM_START_ADDR + TARGET_NVM_RESERVED_BYTES
+
+/*==============================================================================
+                                      INCLUDES
+==============================================================================*/
+#include "driverlib/ioc.h"
+#include "inc/hw_memmap.h"
+
+#endif /* __TARGET_CONFIG_H___ */

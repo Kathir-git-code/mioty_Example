@@ -1,0 +1,355 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+ @code
+  ___ _____ _   ___ _  _____ ___  ___  ___ ___
+ / __|_   _/_\ / __| |/ / __/ _ \| _ \/ __| __|
+ \__ \ | |/ _ \ (__| ' <| _| (_) |   / (__| _|
+ |___/ |_/_/ \_\___|_|\_\_| \___/|_|_\\___|___|
+ embedded.connectivity.solutions.==============
+ @endcode
+
+ @file
+ @copyright  STACKFORCE GmbH, Germany, www.stackforce.de
+ @author     STACKFORCE
+ @brief      RTOS specific example main.
+
+*/
+
+/**@{*/
+
+/* Enables the initialization of peripheral tasks */
+#ifndef INIT_PERIPHERAL_TASKS
+#define INIT_PERIPHERAL_TASKS true
+#endif
+
+/*=============================================================================
+                                INCLUDES
+=============================================================================*/
+#include <xdc/std.h>
+#include <xdc/cfg/global.h>
+#include <xdc/runtime/Error.h>
+#include <xdc/runtime/System.h>
+#include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Task.h>
+#include <ti/sysbios/knl/Semaphore.h>
+#include <ti/sysbios/knl/Swi.h>
+#include <ti/drivers/pin/PINCC26XX.h>
+
+#if UART_ENABLED
+#include <ti/drivers/UART.h>
+#endif /* UART_ENABLED */
+
+/** Include of stack types, HAL and serial */
+#include "Board.h"
+#include "sf_drv_uart.h"
+#include "sf_stack_hal_serial.h"
+#include "sf_drv_clock.h"
+//#if INIT_PERIPHERAL_TASKS
+#include "sf_drv_lp_timer.h"
+#include "sf_drv_rf.h"
+#endif
+
+#include "exampleMain.h"
+
+#include "sf_app_hal_lp.h"
+/*=============================================================================
+                                DEFINES
+=============================================================================*/
+#ifndef UART_ENABLED
+  #error Please define if UART-interface should be supported""
+#endif
+
+#if UART_ENABLED
+#ifndef USE_PIN_SHUTDOWN
+/* We enable the energy saving example by default.
+   When this macro is set to true a second task will be created which takes care
+   about enabling and disabling the uart based on an external input.
+   This allows the device to enter a deeper sleep mode. */
+#define USE_PIN_SHUTDOWN                   true
+#endif /* USE_PIN_SHUTDOWN */
+#endif /* UART_ENABLED */
+
+/* Meter specific sleep pin definition. */
+#ifndef SHUTDOWN_PIN
+#define SHUTDOWN_PIN                       IOID_21
+#endif /* SHUTDOWN_PIN */
+
+#ifndef SHUTDOWN_PIN_DEBOUNCE_TIME
+/* Debounce time in us for the sleep pin */
+#define SHUTDOWN_PIN_DEBOUNCE_TIME         50000U
+#endif /* SHUTDOWN_PIN_DEBOUNCE_TIME */
+
+#ifndef TASK_STACK_SIZE
+#define TASK_STACK_SIZE 1536
+#endif
+
+/*=============================================================================
+                             GLOBAL VARIABLES
+=============================================================================*/
+/* Variable being a runtime object of the uplink & downlink task.
+ * Not static so you can see in ROV  */
+Task_Struct gStackTaskStruct;
+
+/* Serial task construction. */
+static uint8_t gStackTaskStack[TASK_STACK_SIZE];
+
+/* Parameters for the TI-RTOS task constructor */
+static Task_Params gStackTaskParams;
+
+#if USE_PIN_SHUTDOWN
+/* Task and tast stack */
+Task_Struct gPinShutdownTask;
+/* RAM area reserved for the pin shutdown task. */
+static uint8_t gPinShutdownStack[512];
+/* Semaphore used to gate for shutdown */
+static Semaphore_Struct shutdownSem;
+/* Global clock handle used for the debouncing logic.  */
+static Clock_Handle gButtonClockHandle;
+/* PIN_Id for active button (in debounce period) */
+static PIN_Id gActiveButtonPinId;
+/* Global value to store the value of the shutdown pin */
+static bool gPinIsHigh;
+#endif /* USE_PIN_SHUTDOWN */
+/*=============================================================================
+                        LOCAL FUNCTION DEFINITION
+=============================================================================*/
+#if USE_PIN_SHUTDOWN
+/*============================================================================*/
+/*!
+ * @brief  Initialisation of pinShutdown task.
+ *
+ */
+/*============================================================================*/
+static void loc_pinShutdown_init(void);
+#endif /* USE_PIN_SHUTDOWN */
+
+#if USE_PIN_SHUTDOWN
+/*!*****************************************************************************
+ *  @brief      Button clock callback
+ *
+ *  Called when the debounce periode is over. Stopping the clock, toggling
+ *  the device mode based on gActiveButtonPinId:
+ *
+ *  @param      arg  argument (PIN_Handle) connected to the callback
+ *
+ ******************************************************************************/
+static void loc_buttonClockCb(UArg arg);
+#endif /* USE_PIN_SHUTDOWN */
+
+#if USE_PIN_SHUTDOWN
+/*!*****************************************************************************
+ *  @brief      Button callback
+ *
+ *  Initiates the debounce period by disabling interrupts, setting a timeout
+ *  for the button clock callback and starting the button clock.
+ *  Sets the gActiveButtonPinId.
+ *
+ *  @param      handle PIN_Handle connected to the callback
+ *
+ *  @param      pinId  PIN_Id of the DIO triggering the callback
+ *
+ *  @return     none
+ ******************************************************************************/
+static void loc_buttonCb(PIN_Handle handle, PIN_Id pinId);
+#endif /* USE_PIN_SHUTDOWN */
+
+#if USE_PIN_SHUTDOWN
+/*!*****************************************************************************
+ *  @brief      Task which runs when the device is active
+ *
+ *  @param      UArg a0 : User argument that can be passed to the task
+ *
+ *  @param      UArg a1 : User argument that can be passed to the task
+ *
+ *  @return     none - Should never return
+ ******************************************************************************/
+static void loc_pinShutdown(UArg a0, UArg a1);
+#endif /* USE_PIN_SHUTDOWN */
+
+/*============================================================================*/
+/*!
+ * @brief  Prototype for the stack task
+ *
+ */
+/*============================================================================*/
+static void loc_stackTask(UArg arg0, UArg arg1);
+
+/*=============================================================================
+                       LOCAL FUNCTION IMPLEMENTATION
+=============================================================================*/
+#if USE_PIN_SHUTDOWN
+/*============================================================================*/
+/*! loc_pinShutdown_init() */
+/*============================================================================*/
+static void loc_pinShutdown_init(void)
+{
+  /* Locals */
+  Task_Params taskParams;
+  Semaphore_Params semParams;
+
+  /* Configure task. */
+  Task_Params_init(&taskParams);
+  taskParams.stack = gPinShutdownStack;
+  taskParams.stackSize = sizeof(gPinShutdownStack);
+  /* Set lowest possible priority. */
+  taskParams.priority = 1;
+  Task_construct(&gPinShutdownTask, loc_pinShutdown, &taskParams, NULL);
+
+  /* Configure shutdown semaphore. */
+  Semaphore_Params_init(&semParams);
+  semParams.mode = Semaphore_Mode_BINARY;
+  Semaphore_construct(&shutdownSem, 0, &semParams);
+} /* loc_pinShutdown_init () */
+#endif /* USE_PIN_SHUTDOWN() */
+
+#if USE_PIN_SHUTDOWN
+/*============================================================================*/
+/*! loc_buttonClockCb() */
+/*============================================================================*/
+static void loc_buttonClockCb(UArg arg)
+{
+
+  /* Stop the button clock */
+  sf_drv_clock_stop(gButtonClockHandle);
+
+  /* Check that there is active button for debounce logic*/
+  if (gActiveButtonPinId != PIN_TERMINATE)
+  {
+    gPinIsHigh = PIN_getInputValue(gActiveButtonPinId);
+    Semaphore_post(Semaphore_handle(&shutdownSem));
+  }/* if */
+
+  /* Set gActiveButtonPinId to none... */
+  gActiveButtonPinId = PIN_TERMINATE;
+} /* loc_buttonClockCb() */
+#endif /* USE_PIN_SHUTDOWN */
+
+#if USE_PIN_SHUTDOWN
+/*============================================================================*/
+/*! loc_buttonCb() */
+/*============================================================================*/
+static void loc_buttonCb(PIN_Handle handle, PIN_Id pinId)
+{
+  /* Set current pinId to active */
+  gActiveButtonPinId = pinId;
+
+  gPinIsHigh = PIN_getInputValue(gActiveButtonPinId);
+
+  /* Disable interrupts during debounce */
+  PIN_setConfig(handle, PIN_BM_IRQ, gActiveButtonPinId | PIN_IRQ_DIS);
+  PIN_clrPendInterrupt(handle, gActiveButtonPinId);
+
+
+  /* Set timeout x ms from now and re-start clock */
+  sf_drv_clock_start(gButtonClockHandle, SHUTDOWN_PIN_DEBOUNCE_TIME,
+                     loc_buttonClockCb);
+}/* loc_buttonCb() */
+#endif /* USE_PIN_SHUTDOWN */
+
+#if USE_PIN_SHUTDOWN
+/*============================================================================*/
+/*! loc_pinShutdown() */
+/*============================================================================*/
+static void loc_pinShutdown(UArg a0, UArg a1)
+{
+  /* Pin driver handles */
+  static PIN_Handle buttonHandle;
+  /* Button pin state */
+  static PIN_State buttonState;
+  /* Shutdown Button pin table */
+  PIN_Config ButtonTableShutdown[] = { SHUTDOWN_PIN   | PIN_INPUT_EN |
+                                       PIN_PULLDOWN | PIN_IRQ_DIS, PIN_TERMINATE};
+
+  /* Setup button pins with ISR */
+  buttonHandle = PIN_open(&buttonState, ButtonTableShutdown);
+  PIN_registerIntCb(buttonHandle, loc_buttonCb);
+
+  /* Construct clock for debounce */
+  gButtonClockHandle = sf_drv_clock_init();
+
+  /* Check the state of the Sleep/Shutdown pin and decide how to proceed */
+  gPinIsHigh = PIN_getInputValue(SHUTDOWN_PIN);
+
+  while(1)
+  {
+    /* If it's high we wait for a negativ edge. Uart will remain active. */
+    if(gPinIsHigh)
+    {
+      /* Re-enable interrupts to detect button press. */
+      PIN_setConfig(buttonHandle, PIN_BM_IRQ, SHUTDOWN_PIN | PIN_IRQ_NEGEDGE);
+      /* Pend on semaphore before going to shutdown */
+      Semaphore_pend(Semaphore_handle(&shutdownSem), BIOS_WAIT_FOREVER);
+    }
+    /* If the pin is pulled down we will disable the uart peripheral in order
+     * to support a deeper sleep mode. */
+    else
+    {
+      sf_stack_hal_serial_close();
+      /* Re-enable interrupts to detect button release. */
+      PIN_setConfig(buttonHandle, PIN_BM_IRQ, SHUTDOWN_PIN | PIN_IRQ_POSEDGE);
+      /* Pend on semaphore until next interrupt wakes up the device */
+      Semaphore_pend(Semaphore_handle(&shutdownSem), BIOS_WAIT_FOREVER);
+      sf_stack_hal_serial_init();
+    }/* if ... else */
+  }/* while(1) */
+}/* loc_pinShutdown() */
+#endif /* USE_PIN_SHUTDOWN */
+
+/*============================================================================*/
+/*! loc_stackTask() */
+/*============================================================================*/
+static void loc_stackTask(UArg arg0, UArg arg1)
+{
+  /* Call the RTOS independent main function. */
+  exampleMain();
+}/* loc_stackTask() */
+
+/*=============================================================================
+                                MAIN FUNCTION
+=============================================================================*/
+int main(void)
+{
+  Error_Block eb;
+
+  /* Call board init functions. */
+  Board_init();
+
+  #if UART_ENABLED
+  UART_init();
+  sf_stack_hal_serial_taskInit();
+  #if USE_PIN_SHUTDOWN
+  loc_pinShutdown_init();
+  #endif /* USE_PIN_SHUTDOWN */
+  #endif /* UART_ENABLED */
+
+  #if INIT_PERIPHERAL_TASKS
+  sf_stack_hal_lp_timerTaskInit();
+  sf_stack_hal_rf_taskInit();
+  #endif
+
+  /* Initialize error parameters */
+  Error_init(&eb);
+
+  Task_Params_init(&gStackTaskParams);
+  gStackTaskParams.stackSize = sizeof(gStackTaskStack);
+  gStackTaskParams.priority = 2;
+  gStackTaskParams.stack = &gStackTaskStack;
+
+  /* Initialize tasks */
+  Task_construct(&gStackTaskStruct, loc_stackTask, &gStackTaskParams, NULL);
+
+  /* Start BIOS */
+  BIOS_start();
+
+  return 0;
+} /* main() */
+
+
+/**@}*/
+
+#ifdef __cplusplus
+}
+#endif
