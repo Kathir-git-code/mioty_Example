@@ -35,6 +35,13 @@ extern "C" {
 #include "sf_memory_management.h"
 #include<flash_interface.h>
 #include <syscfg/ti_drivers_config.h>
+#include <ti/drivers/GPIO.h>
+
+#define BOARD_EXT_FLASH_SPI_CS      22
+#define BOARD_EXT_FLASH_SPI_CLK     20
+#define BOARD_EXT_FLASH_SPI_MOSI    19
+#define BOARD_EXT_FLASH_SPI_MISO    21
+
 //#include"app_commons/driver/Board.h"
 #ifndef SF_STACK_NUMBER
 /*! The definitions SF_STACK_NUMBER is available in the CMakeLists.txt */
@@ -163,6 +170,91 @@ static void loc_sendData( void )
  * @return The next stack @ref stackId_t
  */
 /*============================================================================*/
+
+
+/*
+ *  ======== Board_sendExtFlashByte ========
+ */
+void Board_sendExtFlashByte1(uint8_t byte)
+{
+    uint8_t i;
+
+    /* SPI Flash CS */
+    GPIO_write(BOARD_EXT_FLASH_SPI_CS, 0);
+
+    for (i = 0; i < 8; i++) {
+        GPIO_write(BOARD_EXT_FLASH_SPI_CLK, 0); /* SPI Flash CLK */
+
+        /* SPI Flash MOSI */
+        GPIO_write(BOARD_EXT_FLASH_SPI_MOSI, (byte >> (7 - i)) & 0x01);
+        GPIO_write(BOARD_EXT_FLASH_SPI_CLK, 1);  /* SPI Flash CLK */
+
+        /*
+         * Waste a few cycles to keep the CLK high for at
+         * least 45% of the period.
+         * 3 cycles per loop: 8 loops @ 48 Mhz = 0.5 us.
+         */
+        CPUdelay(8);
+    }
+
+    GPIO_write(BOARD_EXT_FLASH_SPI_CLK, 0);  /* CLK */
+    GPIO_write(BOARD_EXT_FLASH_SPI_CS, 1);  /* CS */
+
+    /*
+     * Keep CS high at least 40 us
+     * 3 cycles per loop: 700 loops @ 48 Mhz ~= 44 us
+     */
+    CPUdelay(700);
+}
+
+/*
+ *  ======== Board_wakeUpExtFlash ========
+ */
+void Board_wakeUpExtFlash1(void)
+{
+    /* SPI Flash CS*/
+    GPIO_setConfig(BOARD_EXT_FLASH_SPI_CS, GPIO_CFG_OUTPUT | GPIO_CFG_OUT_HIGH | GPIO_CFG_OUT_STR_MED);
+
+    /*
+     *  To wake up we need to toggle the chip select at
+     *  least 20 ns and ten wait at least 35 us.
+     */
+
+    /* Toggle chip select for ~20ns to wake ext. flash */
+    GPIO_write(BOARD_EXT_FLASH_SPI_CS, 0);
+    /* 3 cycles per loop: 1 loop @ 48 Mhz ~= 62 ns */
+    CPUdelay(1);
+    GPIO_write(BOARD_EXT_FLASH_SPI_CS, 1);
+    /* 3 cycles per loop: 560 loops @ 48 Mhz ~= 35 us */
+    CPUdelay(560);
+}
+
+/*
+ *  ======== Board_shutDownExtFlash ========
+ */
+void Board_shutDownExtFlash1(void)
+{
+    /*
+     *  To be sure we are putting the flash into sleep and not waking it,
+     *  we first have to make a wake up call
+     */
+    Board_wakeUpExtFlash1();
+
+    /* SPI Flash CS*/
+    GPIO_setConfig(BOARD_EXT_FLASH_SPI_CS, GPIO_CFG_OUTPUT | GPIO_CFG_OUT_HIGH | GPIO_CFG_OUT_STR_MED);
+    /* SPI Flash CLK */
+    GPIO_setConfig(BOARD_EXT_FLASH_SPI_CLK, GPIO_CFG_OUTPUT | GPIO_CFG_OUT_LOW | GPIO_CFG_OUT_STR_MED);
+    /* SPI Flash MOSI */
+    GPIO_setConfig(BOARD_EXT_FLASH_SPI_MOSI, GPIO_CFG_OUTPUT | GPIO_CFG_OUT_LOW | GPIO_CFG_OUT_STR_MED);
+    /* SPI Flash MISO */
+    GPIO_setConfig(BOARD_EXT_FLASH_SPI_MISO, GPIO_CFG_IN_PD);
+
+    uint8_t extFlashShutdown = 0xB9;
+
+    Board_sendExtFlashByte1(extFlashShutdown);
+
+}
+
 static stackId_t loc_getNextStack( void )
 {
   static uint8_t currentIndex = 0;
@@ -390,32 +482,6 @@ void exampleMain( void )
   /* Initializes the stacks with NVM data, if possible. */
   sf_memory_management_readNvm( SF_STACK_NUMBER, stacks );
 
-   /* flash_init();
-   flash_open();
-
-  // uart_init(); //Inductive sensor , Only Rx pins is used
-   ADC_init();
-
- //   UART_close(uart_101);
-
-      GPIO_enableInt(CONFIG_GPIO_FORWARDPULSE_DIO6); //Forward Pulse Interrupt
-      GPIO_enableInt(CONFIG_GPIO_REVERSEPULSE_DIO28); //Reverse Pulse Interrupt
-      GPIO_enableInt(CONFIG_GPIO_REED_SWITCH_DIO27); //Reed Switch Interrupt
-      GPIO_enableInt(CONFIG_VIBRATION_SENS_DIO18); //Vibration Sensor Interrupt
-      Board_shutDownExtFlash1();*/
- /* initI2C();
-
-
-*/
-
-  // Configure GPIO with pull-down
-//  GPIO_PinConfig gpioConfig = GPIO_CFG_INPUT | GPIO_CFG_IN_PU_DOWN;  // Pull-down
-//  GPIO_setConfig(Board_GPIO0, gpioConfig);
-
-/*  spi_init();
-
-  flash_sleep();
-  SPI_close(spi);*/
 
   uart_init();
   initI2C();
